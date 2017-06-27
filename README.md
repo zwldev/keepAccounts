@@ -1,6 +1,6 @@
-# keepaccounts
+# 账本
 
-> my first vue
+> 初学vue，拿来练手项目
 
 ## Build Setup
 
