@@ -57,14 +57,22 @@
       }
     },
     methods: {
-      setActive () {
-        if (event.currentTarget.classList && event.currentTarget.classList.contains('active')) return false
+
+      clearActive () {
         let item = this.$refs.ul.getElementsByTagName('li')
         for (let i in item) {
           if (item[i].classList && item[i].classList.contains('active')) item[i].classList.remove('active')
         }
+      },
+      setActive () {
+        if (event.currentTarget.classList && event.currentTarget.classList.contains('active')) return false
+        this.clearActive()
         event.currentTarget.classList.add('active')
         this.type = event.currentTarget.dataset.type
+      },
+      clearData () {
+        this.clearActive()
+        this.type = ''
       }
     }
   }

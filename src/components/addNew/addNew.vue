@@ -10,6 +10,7 @@
     <div class="types-list">
       <v-types></v-types>
     </div>
+    <v-calculator></v-calculator>
     <div>
       <mt-datetime-picker ref="picker"
                           type="date"
@@ -24,6 +25,7 @@
 
 <script type="text/ecmascript-6">
   import types from './types.vue'
+  import calculator from './calculator.vue'
   export default{
     data () {
       return {
@@ -32,7 +34,8 @@
       }
     },
     components: {
-      'v-types': types
+      'v-types': types,
+      'v-calculator': calculator
     },
     methods: {
       openPicker () {
@@ -43,6 +46,7 @@
       },
       cancelModel () {
         this.$parent.ctrlNewModel()
+        this.$children[0].clearData()
       }
     }
   }
