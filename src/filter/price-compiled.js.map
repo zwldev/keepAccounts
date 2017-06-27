@@ -1,0 +1,1 @@
+{"version":3,"sources":["price.js"],"names":[],"mappings":"AAAA,OAAO,GAAP,MAAgB,KAAhB;;AAEA,IAAI,MAAJ,CAAW,OAAX,EAAoB,UAAU,KAAV,EAAiB;AACnC,SAAO,OAAO,KAAP,EAAc,OAAd,CAAsB,CAAtB,CAAP;AACD,CAFD","file":"price-compiled.js","sourcesContent":["import Vue from 'vue'\n\nVue.filter('price', function (value) {\n  return Number(value).toFixed(2)\n})\n"]}

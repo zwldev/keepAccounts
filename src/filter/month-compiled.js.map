@@ -1,0 +1,1 @@
+{"version":3,"sources":["month.js"],"names":[],"mappings":"AAAA,OAAO,GAAP,MAAgB,KAAhB;;AAEA,IAAI,MAAJ,CAAW,OAAX,EAAoB,UAAU,KAAV,EAAiB;AACnC,SAAO,QAAQ,EAAR,GAAa,MAAM,OAAO,KAAP,CAAnB,GAAmC,KAA1C;AACD,CAFD","file":"month-compiled.js","sourcesContent":["import Vue from 'vue'\n\nVue.filter('month', function (value) {\n  return value < 10 ? '0' + String(value) : value\n})\n"]}
