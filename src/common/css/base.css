@@ -1,80 +1,81 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-    min-width: 320px;
-    max-width: 640px;
-    margin: 0 auto;
-    height: 100%;
-    font: 12px/1.5 \5b8b\4f53, "黑体";
-    font-family: "黑体";
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  height: 100%;
+  font: 12px/1.5 \5b8b\4f53, "黑体";
+  font-family: "黑体";
 }
 
 html {
-    font-size: 20px;
-    font-size: calc(200vw / 32);
+  font-size: 20px;
+  font-size: calc(200vw / 32);
+  height: 100%;
 }
 
 @media all and (max-width: 320px) {
-    html {
-        font-size: 20px
-    }
+  html {
+    font-size: 20px
+  }
 }
 
 @media all and (min-width: 640px) {
-    html {
-        font-size: 40px
-    }
+  html {
+    font-size: 40px
+  }
 }
 
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-input,select, textarea, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    font-family: "黑体";
+input, select, textarea, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: "黑体";
 }
 
-input, textarea, select {
-    -webkit-appearance: none;
-    appearance:none;
-    -moz-appearance:none;
-    border: none;
-    border-radius: 0;
-    display: block;
-    padding: 0;
-    margin: 0;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+input, textarea, select, button {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    text-decoration: none;
-    color: #000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: #000;
 }
 
 .clear-fix {
-    display: block;
+  display: block;
 }
 
 .clear-fix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .fl {
-    float: left;
+  float: left;
 }
 
 .fr {
-    float: right;
+  float: right;
 }
 
 .fix-box {

@@ -1,5 +1,5 @@
 <template>
-  <div class="pay-list" :style="{height: listHeight + 'px'}">
+  <div class="pay-list">
     <ul v-if="list">
       <li v-for="(l, index) in list">
         <p class="time">{{ l[0].time }}</p>
@@ -17,7 +17,6 @@
         </dl>
       </li>
     </ul>
-
   </div>
 </template>
 
@@ -64,11 +63,12 @@
 <style scoped>
   .pay-list {
     height: 100%;
-    padding: 5rem 0 2rem 0;
+    /*padding: 5rem 0 2rem 0;*/
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     position: relative;
     z-index: 0;
+    flex: 1;
   }
 
   .pay-list li {

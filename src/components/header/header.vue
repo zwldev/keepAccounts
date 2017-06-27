@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="header fix-box">
+  <div class="header-wrap">
+    <div class="header">
       <h2>账本</h2>
       <div class="top-tool">
         <ul class="clear-fix" v-if="obj.pay">
@@ -50,7 +50,7 @@
         this.$refs.picker.open()
       },
       handleConfirm (date) {
-        const month = date.getMonth() + 1
+        const month = 6
         this.items.month = month
         this.$emit('getData', month)
       }
@@ -67,10 +67,10 @@
   .header {
     width: 100%;
     background: #1C1B1F;
+    z-index: 99;
+    position: relative;
     /*background: #3a3a3a;*/
-    height: 5rem;
-    position: fixed;
-    z-index: 999;
+    /*height: 5rem;*/
   }
 
   .header h2 {

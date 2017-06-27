@@ -31,8 +31,7 @@
 
 <style scoped>
   .detail {
-    height: 100%;
-    padding: 5rem 0 2rem 0;
+    flex: 1;
   }
 
   h2 {

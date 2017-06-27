@@ -7,3 +7,4 @@ module.exports = function (year, month) {
   }
   return day
 }
+

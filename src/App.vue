@@ -5,23 +5,26 @@
       <router-view :items="items"></router-view>
     </transition>
     <v-footer></v-footer>
+    <v-new :class="{'show': isShowNewModel}"></v-new>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import header from './components/header/header.vue'
   import footer from './components/footerBar/footerBar.vue'
+  import addNew from './components/addNew/addNew.vue'
   import { Toast } from 'mint-ui'
   export default {
     data () {
       return {
         items: {},
-        centerHeight: 0
+        isShowNewModel: false
       }
     },
     components: {
       'v-header': header,
-      'v-footer': footer
+      'v-footer': footer,
+      'v-new': addNew
     },
     methods: {
       requestData (month) {
@@ -41,6 +44,13 @@
             })
           }
         )
+      },
+      ctrlNewModel () {
+        if (this.isShowNewModel === true) {
+          this.isShowNewModel = false
+        } else {
+          this.isShowNewModel = true
+        }
       }
     },
     created () {
@@ -53,6 +63,19 @@
   @import "common/css/reset.css";
   @import "common/css/base.css";
   @import "common/css/font-awesome.min.css";
+
+  #app {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%
+  }
 
   .slide-fade-enter-active {
     transition: all .3s ease;

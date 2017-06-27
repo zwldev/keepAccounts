@@ -1,9 +1,9 @@
 <template>
-  <div class="footer-bar fix-box"><i class="fa fa-plus"></i> 记一笔</div>
+  <div class="footer-bar" @click="addNew()"><i class="fa fa-plus"></i> 记一笔</div>
 </template>
 <style scoped>
   .footer-bar {
-    position: fixed;
+    position: relative;
     background-color: #f7f7f7;
     border-top: 1px solid #e1e1e1;
     bottom: 0;
@@ -22,7 +22,10 @@
       return {
       }
     },
-    components: {
+    methods: {
+      addNew () {
+        this.$parent.ctrlNewModel()
+      }
     }
   }
 </script>
