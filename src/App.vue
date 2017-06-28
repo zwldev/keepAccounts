@@ -18,7 +18,7 @@
     data () {
       return {
         items: {},
-        isShowNewModel: true
+        isShowNewModel: false
       }
     },
     components: {

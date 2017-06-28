@@ -47,6 +47,7 @@
       cancelModel () {
         this.$parent.ctrlNewModel()
         this.$children[0].clearData()
+        this.$children[1].clearCalculator()
       }
     }
   }
@@ -98,7 +99,7 @@
     border-radius: 3px;
     border: 1px solid #bbb;
     padding: .1rem .2rem;
-    color: #aaa;
+    color: #777;
     font-size: .6rem;
     margin: .4rem .5rem;
   }

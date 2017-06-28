@@ -12,7 +12,7 @@ var router = new Router({
     name: 'indexList',
     component: indexList
   }, {
-    path: '/detail/:id&:month',
+    path: '/:id&:month',
     name: 'detail',
     component: detail
   }]

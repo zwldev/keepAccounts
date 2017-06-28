@@ -33,3 +33,4 @@ router.afterEach(route => {
 })
 
 export default router
+
